@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Log_Index</title>
+
+    <link rel="stylesheet" href="/my/css/bootstrap.css">
+    <link rel="stylesheet" href="/my/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/my/css/bootstrap-reboot.css">
+
+    <script src="/my/js/jquery-3.3.1.js"></script>
+    <script src="/my/js/bootstrap.js"></script>
+</head>
+<script type="text/javascript">
+    function sele() {
+        var path = $("#path").val();
+        var whe = $("#whe").val();
+        var fen = $("#fen").val();
+        var dxx = $("#dxx").val();
+        $.ajax({
+            url:"/log/getCon/" + path + "/" + whe + "/" + fen + "/" + dxx,
+            type:"post",
+            success:function (view) {
+                $("#down").html(view);
+            }
+        })
+    }
+</script>
+<body>
+<div id="up">
+    <table class="table">
+        <tr>
+            <td>文件:</td>
+            <td><input type="text" id="path"></td>
+            <td>查询:</td>
+            <td><input type="text" id="whe"></td>
+            <td>分割:</td>
+            <td><input type="text" id="fen"></td>
+            <td>大小写:</td>
+            <td><select id="dxx"><option value="0" selected="selected">否</option><option value="1">是</option></select></td>
+            <td><button class="btn btn-primary" type="button" onclick="sele()" contenteditable="true">查</button></td>
+        </tr>
+    </table>
+</div>
+<div id="down" data-spy="scroll" data-target="#myScrollspy" data-offset="0"
+     style="height:800px;overflow:auto; position: relative;"></div>
+</body>
+</html>

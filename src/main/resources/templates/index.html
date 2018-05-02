@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index UTIL</title>
+    <link rel="stylesheet" href="/my/h-ui/css/H-ui.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="my/ui/zui-1.8.1-dist/dist/css/zui.css">
+    <link rel="stylesheet" href="my/ui/zui-1.8.1-dist/dist/lib/tabs/zui.tabs.css">
+    <link rel="stylesheet" href="my/ui/zui-1.8.1-dist/dist/css/zui.lite.css">
+    <link rel="stylesheet" href="my/ui/css/doc.min.css">
+
+    <script type="text/javascript" src="my/ui/jquery-1.11.0/jquery.js"></script>
+    <script type="text/javascript" src="my/ui/zui-1.8.1-dist/dist/js/zui.js"></script>
+    <!--<script type="text/javascript" src="my/ui/zui-1.8.1-dist/dist/lib/tabs/zui.tabs.js"></script>
+    <script type="text/javascript" src="my/ui/zui-1.8.1-dist/dist/lib/prettify/prettify.js"></script>
+    <script type="text/javascript" src="my/ui/zui-1.8.1-dist/dist/js/zui.lite.js"></script>-->
+</head>
+<body>
+<header>
+    <div style="height: 40px;background-color: #0b2e13">
+        <span style="padding-left: 24px;line-height: 40px;"><i class="icon icon-diamond" style="color: white;"></i></span>
+        <span style="color: white;font-size: 20px;line-height: 40px;padding-left: 20px;font-family: 'Adobe Arabic';">工具系统</span>
+    </div>
+</header>
+<div>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#">首页</a></li>
+        <li><a href="#">动态 <span class="label label-badge label-success">4</span></a></li>
+        <li><a href="#">项目 </a></li>
+        <li>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="your/nice/url">更多 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">任务</a></li>
+                <li><a href="#">bug</a></li>
+                <li><a href="#">需求</a></li>
+                <li><a href="#">用例</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div id="left-body" class="example">
+        <nav class="menu" data-ride="menu" style="width: 200px">
+            <ul id="treeMenu" class="tree tree-menu" data-ride="tree">
+                <li><a href="#"><i class="icon icon-th"></i>首页</a></li>
+                <li><a href="#"><i class="icon icon-user"></i>个人资料</a></li>
+                <li>
+                    <a href="#"><i class="icon icon-time"></i>更新时间</a>
+                    <ul>
+                        <li><a href="#">今天</a></li>
+                        <li><a href="#">明天</a></li>
+                        <li><a href="#">昨天</a></li>
+                        <li><a href="#">本周</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="icon icon-trash"></i>垃圾篓</a></li>
+                <li><a href="#"><i class="icon icon-list-ul"></i>全部</a></li>
+                <li class="open">
+                    <a href="#"><i class="icon icon-tasks"></i>状态</a>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="icon icon-circle-blank"></i>已就绪</a>
+                            <ul>
+                                <li><a href="#">已取消</a></li>
+                                <li><a href="#">已关闭</a></li>
+                            </ul>
+                        </li>
+                        <li class="active"><a href="#"><i class="icon icon-play-sign"></i>进行中</a></li>
+                        <li><a href="#"><i class="icon icon-ok-sign"></i>已完成</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+</body>
+</html>

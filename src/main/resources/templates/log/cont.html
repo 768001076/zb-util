@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Log_Cont</title>
+</head>
+<body>
+<p>行数:<span th:text="${count}"></span></p>
+<table class="table">
+    <tr th:each="cont : ${content}">
+        <td th:text="${cont}"></td>
+    </tr>
+</table>
+</body>
+</html>

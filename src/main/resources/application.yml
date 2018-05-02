@@ -1,0 +1,37 @@
+spring:
+  thymeleaf:
+    mode: HTML5
+    encoding: UTF-8
+    cache: false
+  config:
+    name: MyUtil
+  http:
+    encoding:
+      force: true
+server:
+  port: 8525
+  tomcat:
+    uri-encoding: UTF-8
+myutil:
+  datasource:
+    local:
+      url: jdbc:jtds:sqlserver://127.0.0.1:1434/my
+      driverclassname: net.sourceforge.jtds.jdbc.Driver
+      username: sa
+      password: 123123
+      dbtype: sqlserver
+    test:
+      url: jdbc:jtds:sqlserver://123.160.246.193:1433/B2B_DB
+      driverclassname: net.sourceforge.jtds.jdbc.Driver
+      username: sa
+      password: 5n0wbIrd123
+      dbtype: sqlserver
+    account:
+      url: jdbc:jtds:sqlserver://120.55.85.58:1433/B2B_DB_TC
+      driverclassname: net.sourceforge.jtds.jdbc.Driver
+      username: sa
+      password: 5n0wbIrd
+      dbtype: sqlserver
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: mapper
